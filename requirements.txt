@@ -1,0 +1,33 @@
+# ========= CORE =========
+numpy==1.24.3
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+Pillow==10.0.1
+imutils==0.5.4
+cvzone==1.6.1
+
+# ========= ML / CV =========
+mediapipe==0.10.14
+tensorflow==2.13.0
+keras==2.13.1
+h5py==3.9.0
+
+# ========= FACE =========
+face-recognition==1.3.0
+dlib
+
+# ========= SCI =========
+scipy==1.10.1
+scikit-learn==1.3.0
+
+# ========= UTIL =========
+absl-py
+attrs
+flatbuffers
+matplotlib
+
+# ========= VOICE / GPIO =========
+gTTS
+pygame
+gpiozero
+lgpio

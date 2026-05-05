@@ -1,0 +1,22 @@
+Tanggal,Waktu,Nama,NRP,Pangkat,Kesatuan,Gesture Sequence,Status,Screenshot Path
+2025-12-22,17:02:15,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170215.jpg
+2025-12-22,17:02:34,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170234.jpg
+2025-12-22,17:04:34,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170434.jpg
+2025-12-22,17:04:50,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170450.jpg
+2025-12-22,17:05:01,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170501.jpg
+2025-12-22,17:06:58,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170658.jpg
+2025-12-22,17:07:08,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_170708.jpg
+2025-12-22,22:13:59,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_221359.jpg
+2025-12-22,22:20:54,DAVY,12345,SERBU,ANOMALI,A -> L,GRANTED,access_screenshots\access_DAVY_2025-12-22_222054.jpg
+2025-12-23,10:52:02,DAVY,123456,SERBU,YONIL,A -> E,GRANTED,access_screenshots\access_DAVY_2025-12-23_105202.jpg
+2025-12-23,10:52:13,DAVY,123456,SERBU,YONIL,A -> E,GRANTED,access_screenshots\access_DAVY_2025-12-23_105213.jpg
+2025-12-23,10:57:06,DAVY,123456,SERBU,YONIL,A -> E,GRANTED,access_screenshots\access_DAVY_2025-12-23_105706.jpg
+2025-12-23,13:34:53,DAVY,123456,SERBU,YONIL,A -> B,GRANTED,access_screenshots\access_DAVY_2025-12-23_133453.jpg
+2025-12-23,13:35:08,DAVY,123456,SERBU,YONIL,A -> B,GRANTED,access_screenshots\access_DAVY_2025-12-23_133508.jpg
+2025-12-23,13:35:33,DAVY,123456,SERBU,YONIL,A -> B,GRANTED,access_screenshots\access_DAVY_2025-12-23_133533.jpg
+2025-12-23,13:35:54,DAVY,123456,SERBU,YONIL,A -> B,GRANTED,access_screenshots\access_DAVY_2025-12-23_133554.jpg
+2026-05-05,14:11:31,alice,A,C,GRANTED,access_screenshots/access_alice_2026-05-05_141131.jpg
+2026-05-05,14:15:21,unknown,B,-,DENIED,access_screenshots/access_unknown_2026-05-05_141521.jpg
+2026-05-05,14:15:42,charlie,B,A,GRANTED,access_screenshots/access_charlie_2026-05-05_141542.jpg
+2026-05-05,14:17:55,charlie,B,A,GRANTED,access_screenshots/access_charlie_2026-05-05_141755.jpg
+2026-05-05,14:18:26,bob,B,D,GRANTED,access_screenshots/access_bob_2026-05-05_141826.jpg

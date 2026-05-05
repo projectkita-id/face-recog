@@ -1,0 +1,14 @@
+[
+  {
+    "username": "alice",
+    "gesture_1": "A",
+    "gesture_2": "C",
+    "face_path": "user.jpg"
+  },
+  {
+    "username": "bob",
+    "gesture_1": "B",
+    "gesture_2": "D",
+    "face_path": "user.jpg"
+  }
+]
