@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.so
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment/config
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# App data (generated)
+users.db
+*.db
+access_screenshots/
+weapon_access_records.csv
+assets/voice_cache/
+*.mp3
+
+# Logs
+*.log
