@@ -327,7 +327,7 @@ class SolenoidController:
         if self._device is None or getattr(self._device, "closed", False):
             self._init_device()
 
-    def unlock(self, duration=3):
+    def unlock(self, duration=SOLENOID_OPEN_SECONDS):
         if not self._available:
             return
 
@@ -342,18 +342,20 @@ class SolenoidController:
                     print("Solenoid UNLOCK")
                     self._device.on()
                     self._is_open = True
-
-                    time.sleep(3)
-
-                    self._device.off()
-                    self._is_open = False
-                    print("Solenoid LOCK inside")
+                    time.sleep(duration)
                 except Exception as e:
                     print("GPIO on failed:", e)
                     self._available = False
                     return
+                finally:
+                    try:
+                        self._device.off()
+                    except Exception as e:
+                        print("GPIO off failed:", e)
+                    self._is_open = False
+                    print("Solenoid LOCK")
 
-            time.sleep(duration)
+            time.sleep(0.1)
 
             with self._lock:
                 if token != self._close_token:
@@ -366,7 +368,6 @@ class SolenoidController:
         try:
             if self._is_open:
                 self._device.off()
-                print("Solenoid LOCK")
         except Exception as e:
             print("GPIO off failed:", e)
         finally:
