@@ -318,12 +318,16 @@ class SolenoidController:
             Device.pin_factory = LGPIOFactory()
             self._device = LED(self._pin, active_high=False)
             self._available = True
-        except Exception as exc:
+        except Exception as e:
             self._device = None
             self._available = False
-            print("GPIO init failed:", exc)
+            print("GPIO init failed:", e)
 
-    def unlock(self, duration=SOLENOID_OPEN_SECONDS):
+    def _ensure_device(self):
+        if self._device is None or getattr(self._device, "closed", False):
+            self._init_device()
+
+    def unlock(self, duration=3):
         if not self._available:
             return
 
@@ -331,19 +335,26 @@ class SolenoidController:
             with self._lock:
                 self._close_token += 1
                 token = self._close_token
+                self._ensure_device()
+                if not self._available:
+                    return
                 try:
                     print("Solenoid UNLOCK")
                     self._device.on()
                     self._is_open = True
-                    time.sleep(duration)
+
+                    time.sleep(3)
+
                     self._device.off()
                     self._is_open = False
-                except Exception as exc:
-                    print("GPIO on failed:", exc)
+                    print("Solenoid LOCK inside")
+                except Exception as e:
+                    print("GPIO on failed:", e)
                     self._available = False
                     return
 
-            time.sleep(0.1)
+            time.sleep(duration)
+
             with self._lock:
                 if token != self._close_token:
                     return
@@ -355,8 +366,9 @@ class SolenoidController:
         try:
             if self._is_open:
                 self._device.off()
-        except Exception:
-            pass
+                print("Solenoid LOCK")
+        except Exception as e:
+            print("GPIO off failed:", e)
         finally:
             if self._device:
                 try:
